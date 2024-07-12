@@ -1,21 +1,3 @@
-getrenv().getos = function() return getdevice() end
-getrenv().getplatform = function() return getos() end
-
-getrenv().playanimation = function(animationId, player)
-    runanimation(animationId, player)
-end
-
-getrenv().getlocalplayer = function(name)
-  return not name and getplayers()["LocalPlayer"] or getplayers()[name]
-end
-
-getrenv().playanimation = function(animationId, player)
-    runanimation(animationId, player)
-end
-
-getrenv().loaded = true
-getrenv().isloaded = true
-getrenv().isexecutorloaded = true
 
 getrenv().getplayers = function()
   local players = {}
@@ -107,3 +89,21 @@ end
 getrenv().queueonteleport = function(scripttoexec)
   queue_on_teleport(scripttoexec)
 end
+getrenv().getos = function() return getdevice() end
+getrenv().getplatform = function() return getos() end
+
+getrenv().playanimation = function(animationId, player)
+    runanimation(animationId, player)
+end
+
+getrenv().getlocalplayer = function(name)
+  return not name and getplayers()["LocalPlayer"] or getplayers()[name]
+end
+
+getrenv().playanimation = function(animationId, player)
+    runanimation(animationId, player)
+end
+
+getrenv().loaded = true
+getrenv().isloaded = true
+getrenv().isexecutorloaded = true
